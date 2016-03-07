@@ -1,2 +1,62 @@
-<h1>Password#check</h1>
-<p>Find me in app/views/password/check.html.erb</p>
+<div class=jumbotron>
+  <h1>Red Alert Securities</h1>
+</div>
+
+<nav class="navbar navbar-default" id="navbar-navbar-default">
+
+  <div class="container-fluid">
+<!-- Brand and toggle get grouped for better mobile display -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="testimonials">Testimonials<span class="sr-only">(current)</span>
+            </li>
+
+            <!-- <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+
+                  <li>
+                    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwi1-L-Bur7KAhWrn4MKHScpB1kQFghEMAE&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FRuby_(programming_language)&usg=AFQjCNFflPfJS_rYHq5ArkVDgPtqNejpXA" target="_blank">Ruby</a>
+                  </li>
+                  <li><a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" target="_blank">HTML</a></li>
+                  <li><a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" target="_blank">Javascript</a></li>
+
+              </ul>
+          </li> -->
+        </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class=container>
+
+
+  <div class="messages">
+
+    <h3>Please enter your credentials below. For your protection, password will not be displayed.</h3>
+
+    <!-- Ruby code for displaying user id will evaluate here -->
+    <p><%= @userid_validations %></p>
+
+    <!-- Ruby code for displaying user password will evaluate here -->
+    <p><%= @password_validations %></p>
+
+  </div>
+  <!-- Form that once executed will 'get' page check_password -->
+  <form actions= "/password/check" method= "get">
+    <input autofocus id="user_name_id" type="text" name="userid" value="<%= @userid %>" placeholder="User ID" required/>
+
+    <!-- Break between lines of 1 label followed by 1 input box -->
+    <br/>
+
+    <input id="user_password_id" type ="password" name="password" autocomplete="off" placeholder="Password" required/>
+
+    <!-- Break between lines of 1 label followed by 1 input box -->
+    <br/>
+
+    <!-- Button that will submit form above -->
+    <input type="submit" value="submit"/>
+  </form>
+
+</div>
